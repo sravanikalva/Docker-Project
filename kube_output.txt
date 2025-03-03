@@ -1,0 +1,3 @@
+NAME                               READY   STATUS             RESTARTS   AGE
+text-processing-6cd8fbd54b-cbzmx   0/1     ImagePullBackOff   0          35s
+text-processing-6cd8fbd54b-w5wht   0/1     ErrImagePull       0          35s

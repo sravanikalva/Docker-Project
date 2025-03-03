@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: text-processing
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: text-processing
+  template:
+    metadata:
+      labels:
+        app: text-processing
+    spec:
+      containers:
+      - name: text-processing
+        image: text-processing
+        volumeMounts:
+        - name: data-storage
+          mountPath: /home/data
+      volumes:
+      - name: data-storage
+        hostPath:
+          path: ./data
